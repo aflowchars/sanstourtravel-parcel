@@ -42,9 +42,9 @@
 }
 
 .navbar .logo .logo-image {
-  @apply w-16 h-16
+  @apply w-auto h-16
   
-  sm:w-20 sm:h-20;
+  sm:w-auto sm:h-20;
 }
 
 .navbar .menu {
