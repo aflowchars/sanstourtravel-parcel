@@ -1,0 +1,351 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700;800&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Base */
+.sans {
+  @apply bg-slate-50 text-slate-800 min-h-screen font-nunito tracking-wide;
+}
+
+/* 
+  * Utilities 
+  */
+.heading {
+  @apply flex flex-col items-center tracking-wide;
+}
+
+.heading .main {
+  @apply font-extrabold text-2xl
+  
+  lg:text-3xl;
+}
+
+.heading .description {
+  @apply text-slate-500;
+}
+
+.btn {
+  @apply bg-gradient-to-br from-cyan-600 to-cyan-500 text-slate-50 px-8 py-3 text-sm font-bold rounded-2xl tracking-wide;
+}
+
+/* 
+  * Header 
+  */
+.header {
+  @apply shadow-sm sticky inset-0 z-20 bg-slate-50 bg-opacity-95;
+}
+
+.navbar {
+  @apply container mx-auto flex items-center justify-between px-6;
+}
+
+.navbar .logo .logo-image {
+  @apply w-16 h-16
+  
+  sm:w-20 sm:h-20;
+}
+
+.navbar .menu {
+  @apply flex items-center space-x-4;
+}
+
+.navbar .menu .item .link .icon {
+  @apply w-5 h-5  
+  
+  sm:w-6 sm:h-6;
+}
+
+/* 
+  * Hero 
+  */
+.hero {
+  @apply h-96 relative flex items-center justify-center
+  
+  sm:h-[28rem]
+  
+  lg:h-screen;
+}
+
+.hero .text {
+  @apply flex flex-col items-center text-slate-50 justify-center relative z-10;
+}
+
+.hero .text .location {
+  @apply text-xs bg-slate-800 bg-opacity-25 px-4 py-1 rounded-2xl
+  
+  md:text-sm
+
+  lg:text-base lg:-mt-24;
+}
+
+.hero .text .tagline {
+  @apply pt-3 pb-6 text-3xl w-11/12 text-center font-extrabold tracking-wider
+  
+  sm:text-4xl sm:w-8/12
+  
+  lg:text-5xl;
+}
+
+.hero .image {
+  @apply absolute h-full w-full inset-0 z-0;
+}
+
+.hero .image .overlay {
+  @apply absolute inset-0 w-full h-full;
+  background: linear-gradient(
+    180deg,
+    rgba(30, 41, 59, 0.5) 0%,
+    rgba(30, 41, 59, 0.35) 25%,
+    rgba(30, 41, 59, 0.25) 50%,
+    rgba(248, 250, 252, 1) 100%
+  );
+}
+
+.hero .image .photo {
+  @apply h-full w-full object-cover;
+}
+
+/* 
+  * Tours 
+  */
+.tours {
+  @apply pt-32 pb-16 flex flex-col items-center justify-center;
+}
+
+.tours .cards {
+  @apply container mx-auto px-6 py-8 space-y-12 
+  sm:space-y-0 sm:grid sm:grid-cols-2 sm:gap-x-8 sm:gap-y-12 sm:px-8
+
+  lg:space-y-0 lg:grid lg:grid-cols-3 lg:gap-x-8 lg:gap-y-12 lg:px-8;
+}
+
+.tours .cards .item {
+  @apply relative;
+}
+
+.tours .cards .item .cta {
+  @apply absolute inset-0 w-full h-full;
+}
+
+.tours .cards .item .image {
+  @apply relative;
+}
+
+.tours .cards .item .image .photo {
+  @apply rounded-2xl;
+}
+
+.tours .cards .item .tag {
+  @apply flex items-center justify-between absolute top-0 left-0 w-full p-4;
+}
+
+.tours .cards .item .tag .content-text {
+  @apply text-xxs font-bold border-[1.5px] border-slate-50 text-slate-50 px-2 py-1 bg-slate-800 bg-opacity-30 rounded-xl;
+}
+
+.tours .cards .item .slider {
+  @apply flex items-center space-x-1 absolute bottom-4 left-1/2 -translate-x-1/2;
+}
+
+.tours .cards .item .card-text .title-location {
+  @apply border-b border-slate-200 py-4;
+}
+
+.tours .cards .item .card-text .title-location .title {
+  @apply pb-4 font-bold text-lg tracking-wide;
+}
+
+.tours .cards .item .card-text .title-location .location {
+  @apply text-slate-500;
+}
+
+.tours .cards .item .card-text .title-location .location .tag-location {
+  @apply text-xxs font-bold uppercase;
+}
+
+.tours .cards .item .card-text .title-location .location .list {
+  @apply text-sm;
+}
+
+.tours .cards .item .card-text .price-day {
+  @apply py-4 flex items-center justify-between;
+}
+
+.tours .cards .item .card-text .price-day .price {
+  @apply text-sm;
+}
+
+.tours .cards .item .card-text .price-day .price .nominal {
+  @apply font-bold text-base;
+}
+
+.tours .cards .item .card-text .price-day .price .people {
+  @apply text-slate-500;
+}
+
+.tours .cards .item .card-text .price-day .day {
+  @apply text-sm text-slate-500;
+}
+
+/* 
+  * Benefit 
+  */
+.benefit {
+  @apply py-16 container mx-auto px-6
+
+  sm:px-8;
+}
+
+.benefit .list {
+  @apply grid grid-cols-2 gap-x-2 gap-y-8 py-8
+  
+  sm:gap-x-8
+  
+  lg:grid-cols-4;
+}
+
+.benefit .list .item {
+  @apply flex flex-col items-center justify-center;
+}
+
+.benefit .list .item .image {
+  @apply p-4;
+}
+
+.benefit .list .item .text .head {
+  @apply text-center font-semibold pb-2
+  
+  sm:font-bold;
+}
+
+/* 
+  * Testimony 
+  */
+.testimony {
+  @apply container mx-auto py-16 flex flex-col items-center;
+}
+
+.testimony .cards {
+  @apply px-6 py-8 space-y-8
+
+  sm:px-8 sm:space-y-0 sm:grid sm:grid-cols-2 sm:gap-x-6 sm:gap-y-8
+  
+  lg:grid-cols-3;
+}
+
+.testimony .cards .item {
+  @apply relative border border-slate-200 p-6 h-72 rounded-3xl
+  sm:h-80;
+}
+
+.testimony .cards .item .top {
+  @apply flex items-center justify-between border-b border-slate-200 pb-4;
+}
+
+.testimony .cards .item .top .author {
+  @apply flex items-center space-x-2;
+}
+
+.testimony .cards .item .top .author .photo {
+  @apply w-12 h-12 border border-slate-200 rounded-full;
+}
+
+.testimony .cards .item .top .author .text .name {
+  @apply text-sm font-bold;
+}
+
+.testimony .cards .item .top .author .text .occupation {
+  @apply text-xs;
+}
+
+.testimony .cards .item .top .rating {
+  @apply flex items-center space-x-1;
+}
+
+.testimony .cards .item .top .rating .number {
+  @apply text-sm font-bold;
+}
+
+.testimony .cards .item .top .rating .star {
+  @apply w-4 h-4;
+}
+
+.testimony .cards .item .center {
+  @apply text-sm py-4 text-slate-600;
+}
+
+.testimony .cards .item .bottom {
+  @apply absolute bottom-4 flex items-center space-x-2;
+}
+
+.testimony .cards .item .bottom .instagram {
+  @apply w-6 h-6;
+}
+
+/* 
+  * Social Media 
+  */
+.social-media {
+  @apply py-16 flex flex-col items-center;
+}
+
+.social-media .photos {
+  @apply container mx-auto grid grid-cols-2 gap-x-3 gap-y-4 px-6 pt-8 pb-10
+  
+  sm:px-8 sm:gap-x-6 sm:gap-y-8
+  
+  md:grid-cols-3;
+}
+
+.social-media .photos .image {
+  @apply w-full h-full;
+}
+
+.social-media .photos .image img {
+  @apply w-full h-full object-cover rounded-2xl;
+}
+
+/* 
+  * Footer 
+  */
+.footer {
+  @apply pt-16 container mx-auto px-6 flex flex-col items-center;
+}
+
+.footer .logo .icons {
+  @apply h-16 w-auto
+  
+  sm:h-20;
+}
+
+.footer .brand {
+  @apply pt-2 pb-4 text-lg font-extrabold
+  
+  sm:text-xl;
+}
+
+.footer .menu {
+  @apply flex items-center space-x-6 text-sm text-slate-800
+  
+  sm:text-base sm:space-x-12
+  
+  lg:space-x-16;
+}
+
+.footer .social {
+  @apply pt-6 pb-8 flex items-center space-x-3
+  
+  sm:space-x-6;
+}
+
+.footer .social .item .link .icon {
+  @apply w-5 h-5
+  
+  sm:w-6 sm:h-6;
+}
+
+.footer .copyright {
+  @apply text-sm py-6 border-t border-slate-200 w-full text-center;
+}
