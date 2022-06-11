@@ -1,12 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700;800&display=swap");
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
 
 /* Base */
 .sans {
-  @apply bg-slate-50 text-slate-800 min-h-screen font-nunito tracking-wide;
+  @apply bg-slate-50 text-slate-800 min-h-screen font-nunito tracking-wide relative;
 }
 
 /* 
@@ -41,10 +41,18 @@
   @apply container mx-auto flex items-center justify-between px-6;
 }
 
+.navbar .logo {
+  @apply py-4;
+}
+
 .navbar .logo .logo-image {
-  @apply w-auto h-16
+  @apply w-auto h-8
   
-  sm:w-auto sm:h-20;
+  sm:w-auto sm:h-10
+
+  md:w-auto md:h-12
+
+  lg:w-auto lg:h-14;
 }
 
 .navbar .menu {
@@ -55,6 +63,49 @@
   @apply w-5 h-5  
   
   sm:w-6 sm:h-6;
+}
+
+/* 
+  * Footer 
+  */
+.footer {
+  @apply pt-16 container mx-auto px-6 flex flex-col items-center;
+}
+
+.footer .logo .icons {
+  @apply h-16 w-auto
+    
+    sm:h-20;
+}
+
+.footer .brand {
+  @apply pt-2 pb-4 text-lg font-extrabold
+    
+    sm:text-xl;
+}
+
+.footer .menu {
+  @apply flex items-center space-x-6 text-sm text-slate-800
+    
+    sm:text-base sm:space-x-12
+    
+    lg:space-x-16;
+}
+
+.footer .social {
+  @apply pt-6 pb-8 flex items-center space-x-3
+    
+    sm:space-x-6;
+}
+
+.footer .social .item .link .icon {
+  @apply w-5 h-5
+    
+    sm:w-6 sm:h-6;
+}
+
+.footer .copyright {
+  @apply text-sm py-6 border-t border-slate-200 w-full text-center;
 }
 
 /* 
@@ -116,6 +167,7 @@
 
 .tours .cards {
   @apply container mx-auto px-6 py-8 space-y-12 
+  
   sm:space-y-0 sm:grid sm:grid-cols-2 sm:gap-x-8 sm:gap-y-12 sm:px-8
 
   lg:space-y-0 lg:grid lg:grid-cols-3 lg:gap-x-8 lg:gap-y-12 lg:px-8;
@@ -307,45 +359,34 @@
   @apply w-full h-full object-cover rounded-2xl;
 }
 
-/* 
-  * Footer 
-  */
-.footer {
-  @apply pt-16 container mx-auto px-6 flex flex-col items-center;
+.dt-photos {
+  @apply relative;
 }
 
-.footer .logo .icons {
-  @apply h-16 w-auto
-  
-  sm:h-20;
+.dt-photos .slider .icon {
+  @apply w-1.5 h-1.5;
 }
 
-.footer .brand {
-  @apply pt-2 pb-4 text-lg font-extrabold
-  
-  sm:text-xl;
+.dt-basic-info {
+  @apply container mx-auto px-6 py-6;
 }
 
-.footer .menu {
-  @apply flex items-center space-x-6 text-sm text-slate-800
-  
-  sm:text-base sm:space-x-12
-  
-  lg:space-x-16;
+.divider {
+  @apply container mx-auto w-full h-[0.5px] bg-slate-200;
 }
 
-.footer .social {
-  @apply pt-6 pb-8 flex items-center space-x-3
-  
-  sm:space-x-6;
+.dt-basic-info .title {
+  @apply text-base font-bold text-slate-800 pb-4;
 }
 
-.footer .social .item .link .icon {
-  @apply w-5 h-5
-  
-  sm:w-6 sm:h-6;
+.dt-basic-info .location {
+  @apply text-slate-600;
 }
 
-.footer .copyright {
-  @apply text-sm py-6 border-t border-slate-200 w-full text-center;
+.dt-basic-info .location .tag {
+  @apply text-xxs uppercase font-extrabold;
+}
+
+.dt-basic-info .location .list {
+  @apply text-sm;
 }
