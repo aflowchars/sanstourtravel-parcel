@@ -3,6 +3,16 @@ module.exports = {
   content: ["./src/*.{html,js,ts,jsx,tsx}"],
   theme: {
     extend: {},
+    container: {
+      padding: {
+        DEFAULT: "1.5rem",
+        sm: "2rem",
+        md: "2.5rem",
+        lg: "3rem",
+        xl: "4rem",
+        "2xl": "5rem",
+      },
+    },
     fontFamily: {
       nunito: '"Nunito Sans", sans-serif',
     },

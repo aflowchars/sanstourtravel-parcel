@@ -4,7 +4,12 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="./assets/icons/favicon.svg" />
 
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper@8/swiper-bundle.min.css"
+    />
     <link rel="stylesheet" type="text/css" href="./style/index.css" />
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <title>Sans Tours & Travel</title>
@@ -24,9 +29,24 @@
             />
           </div>
 
+          <div class="search">
+            <input
+              type="text"
+              placeholder="Cari Perjalanan Anda"
+              class="input"
+            />
+            <button class="btn btn-search">
+              <img
+                class="icon"
+                src="./assets/icons/icons=search=white.svg"
+                alt="icons-search"
+              />
+            </button>
+          </div>
+
           <!-- Menu -->
           <ul class="menu">
-            <li class="item">
+            <li class="item search">
               <a class="link" href="#">
                 <img
                   class="icon"
@@ -81,40 +101,36 @@
           <div class="item">
             <a class="cta" href="/tours/mengunjungi-pantai-lombok">&nbsp;</a>
 
-            <div class="image">
-              <img
-                class="photo"
-                src="./assets/images/image-tours-1.jpg"
-                alt="image-tours-1"
-              />
+            <div class="image swiper">
+              <div class="wrapper swiper-wrapper">
+                <img
+                  class="swiper-slide"
+                  src="./assets/images/image-tours-1.jpg"
+                  alt="image-tours-1"
+                />
+
+                <img
+                  class="swiper-slide"
+                  src="./assets/images/image-tours-2.jpg"
+                  alt="image-tours-1"
+                />
+
+                <img
+                  class="swiper-slide"
+                  src="./assets/images/image-tours-3.jpg"
+                  alt="image-tours-1"
+                />
+              </div>
 
               <div class="tag">
                 <div class="location content-text">4 Destinasi</div>
                 <div class="category content-text">Tours</div>
               </div>
 
-              <div class="slider">
-                <img
-                  src="./assets/icons/icons-slider-rest.svg"
-                  alt="icons-slider-rest"
-                />
-                <img
-                  src="./assets/icons/icons-slider-rest.svg"
-                  alt="icons-slider-rest"
-                />
-                <img
-                  src="./assets/icons/icons-slider-active.svg"
-                  alt="icons-slider-active"
-                />
-                <img
-                  src="./assets/icons/icons-slider-rest.svg"
-                  alt="icons-slider-rest"
-                />
-                <img
-                  src="./assets/icons/icons-slider-rest.svg"
-                  alt="icons-slider-rest"
-                />
-              </div>
+              <div class="swiper-pagination"></div>
+
+              <div class="swiper-button-prev"></div>
+              <div class="swiper-button-next"></div>
             </div>
 
             <div class="card-text">
@@ -139,40 +155,36 @@
           <div class="item">
             <a class="cta" href="/tours/mengunjungi-pantai-lombok">&nbsp;</a>
 
-            <div class="image">
-              <img
-                class="photo"
-                src="./assets/images/image-tours-2.jpg"
-                alt="image-tours-1"
-              />
+            <div class="image swiper">
+              <div class="wrapper swiper-wrapper">
+                <img
+                  class="swiper-slide"
+                  src="./assets/images/image-tours-2.jpg"
+                  alt="image-tours-1"
+                />
+
+                <img
+                  class="swiper-slide"
+                  src="./assets/images/image-tours-1.jpg"
+                  alt="image-tours-1"
+                />
+
+                <img
+                  class="swiper-slide"
+                  src="./assets/images/image-tours-3.jpg"
+                  alt="image-tours-1"
+                />
+              </div>
 
               <div class="tag">
                 <div class="location content-text">4 Destinasi</div>
                 <div class="category content-text">Tours</div>
               </div>
 
-              <div class="slider">
-                <img
-                  src="./assets/icons/icons-slider-rest.svg"
-                  alt="icons-slider-rest"
-                />
-                <img
-                  src="./assets/icons/icons-slider-rest.svg"
-                  alt="icons-slider-rest"
-                />
-                <img
-                  src="./assets/icons/icons-slider-active.svg"
-                  alt="icons-slider-active"
-                />
-                <img
-                  src="./assets/icons/icons-slider-rest.svg"
-                  alt="icons-slider-rest"
-                />
-                <img
-                  src="./assets/icons/icons-slider-rest.svg"
-                  alt="icons-slider-rest"
-                />
-              </div>
+              <div class="swiper-pagination"></div>
+
+              <div class="swiper-button-prev"></div>
+              <div class="swiper-button-next"></div>
             </div>
 
             <div class="card-text">
@@ -197,40 +209,36 @@
           <div class="item">
             <a class="cta" href="/tours/mengunjungi-pantai-lombok">&nbsp;</a>
 
-            <div class="image">
-              <img
-                class="photo"
-                src="./assets/images/image-tours-3.jpg"
-                alt="image-tours-1"
-              />
+            <div class="image swiper">
+              <div class="wrapper swiper-wrapper">
+                <img
+                  class="swiper-slide"
+                  src="./assets/images/image-tours-3.jpg"
+                  alt="image-tours-1"
+                />
+
+                <img
+                  class="swiper-slide"
+                  src="./assets/images/image-tours-2.jpg"
+                  alt="image-tours-1"
+                />
+
+                <img
+                  class="swiper-slide"
+                  src="./assets/images/image-tours-1.jpg"
+                  alt="image-tours-1"
+                />
+              </div>
 
               <div class="tag">
                 <div class="location content-text">4 Destinasi</div>
                 <div class="category content-text">Tours</div>
               </div>
 
-              <div class="slider">
-                <img
-                  src="./assets/icons/icons-slider-rest.svg"
-                  alt="icons-slider-rest"
-                />
-                <img
-                  src="./assets/icons/icons-slider-rest.svg"
-                  alt="icons-slider-rest"
-                />
-                <img
-                  src="./assets/icons/icons-slider-active.svg"
-                  alt="icons-slider-active"
-                />
-                <img
-                  src="./assets/icons/icons-slider-rest.svg"
-                  alt="icons-slider-rest"
-                />
-                <img
-                  src="./assets/icons/icons-slider-rest.svg"
-                  alt="icons-slider-rest"
-                />
-              </div>
+              <div class="swiper-pagination"></div>
+
+              <div class="swiper-button-prev"></div>
+              <div class="swiper-button-next"></div>
             </div>
 
             <div class="card-text">
@@ -255,40 +263,36 @@
           <div class="item">
             <a class="cta" href="/tours/mengunjungi-pantai-lombok">&nbsp;</a>
 
-            <div class="image">
-              <img
-                class="photo"
-                src="./assets/images/image-tours-1.jpg"
-                alt="image-tours-1"
-              />
+            <div class="image swiper">
+              <div class="wrapper swiper-wrapper">
+                <img
+                  class="swiper-slide"
+                  src="./assets/images/image-tours-1.jpg"
+                  alt="image-tours-1"
+                />
+
+                <img
+                  class="swiper-slide"
+                  src="./assets/images/image-tours-2.jpg"
+                  alt="image-tours-1"
+                />
+
+                <img
+                  class="swiper-slide"
+                  src="./assets/images/image-tours-3.jpg"
+                  alt="image-tours-1"
+                />
+              </div>
 
               <div class="tag">
                 <div class="location content-text">4 Destinasi</div>
                 <div class="category content-text">Tours</div>
               </div>
 
-              <div class="slider">
-                <img
-                  src="./assets/icons/icons-slider-rest.svg"
-                  alt="icons-slider-rest"
-                />
-                <img
-                  src="./assets/icons/icons-slider-rest.svg"
-                  alt="icons-slider-rest"
-                />
-                <img
-                  src="./assets/icons/icons-slider-active.svg"
-                  alt="icons-slider-active"
-                />
-                <img
-                  src="./assets/icons/icons-slider-rest.svg"
-                  alt="icons-slider-rest"
-                />
-                <img
-                  src="./assets/icons/icons-slider-rest.svg"
-                  alt="icons-slider-rest"
-                />
-              </div>
+              <div class="swiper-pagination"></div>
+
+              <div class="swiper-button-prev"></div>
+              <div class="swiper-button-next"></div>
             </div>
 
             <div class="card-text">
@@ -597,5 +601,29 @@
         <div class="copyright">© 2022 Sans Travel & Tour</div>
       </footer>
     </div>
+    <script src="./js/swiper.js"></script>
+
+    <script>
+      const swiper = new Swiper(".swiper", {
+        // Optional parameters
+
+        // If we need pagination
+        pagination: {
+          el: ".swiper-pagination",
+          dynamicBullets: true,
+        },
+
+        // Navigation arrows
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+
+        // And if we need scrollbar
+        scrollbar: {
+          el: ".swiper-scrollbar",
+        },
+      });
+    </script>
   </body>
 </html>

@@ -3,6 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="./assets/icons/favicon.svg" />
+
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper@8/swiper-bundle.min.css"
+    />
+
     <link rel="stylesheet" type="text/css" href="./style/index.css" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -16,17 +22,32 @@
         <!-- Navbar -->
         <nav class="navbar">
           <!-- Logo -->
-          <div class="logo">
+          <a href="/" class="logo">
             <img
               class="logo-image"
               src="./assets/icons/logo-sans.svg"
               alt="logo-sans"
             />
+          </a>
+
+          <div class="search hidden md:block">
+            <input
+              type="text"
+              placeholder="Cari Perjalanan Anda"
+              class="input"
+            />
+            <button class="btn btn-search">
+              <img
+                class="icon"
+                src="./assets/icons/icons=search=white.svg"
+                alt="icons-search"
+              />
+            </button>
           </div>
 
           <!-- Menu -->
           <ul class="menu">
-            <li class="item">
+            <li class="item search">
               <a class="link" href="#">
                 <img
                   class="icon"
@@ -48,270 +69,316 @@
         </nav>
       </header>
 
-      <section class="dt-photos">
-        <div class="images">
-          <img class="image" src="./assets/images/feed-1.jpg" alt="feed-1" />
+      <section class="dt-photos swiper">
+        <div class="dt-images swiper-wrapper">
           <img
-            class="image hidden"
+            class="swiper-slide dt-image zoom-dark"
+            src="./assets/images/feed-1.jpg"
+            alt="feed-1"
+          />
+          <img
+            class="swiper-slide dt-image zoom-dark"
             src="./assets/images/feed-2.jpg"
             alt="feed-2"
           />
           <img
-            class="image hidden"
+            class="swiper-slide dt-image zoom-dark"
             src="./assets/images/feed-3.jpg"
             alt="feed-3"
           />
           <img
-            class="image hidden"
+            class="swiper-slide dt-image zoom-dark"
             src="./assets/images/feed-4.jpg"
             alt="feed-4"
           />
-          <img
-            class="image hidden"
-            src="./assets/images/feed-5.jpg"
-            alt="feed-5"
-          />
         </div>
 
-        <div
-          class="slider absolute bottom-4 left-1/2 -translate-x-1/2 flex items-center space-x-1"
-        >
-          <img
-            class="icon"
-            src="./assets/icons/icons-slider-rest.svg"
-            alt="icons-slider-rest"
-          />
-          <img
-            class="icon"
-            src="./assets/icons/icons-slider-rest.svg"
-            alt="icons-slider-rest"
-          />
-          <img
-            class="icon"
-            src="./assets/icons/icons-slider-active.svg"
-            alt="icons-slider-active"
-          />
-          <img
-            class="icon"
-            src="./assets/icons/icons-slider-rest.svg"
-            alt="icons-slider-rest"
-          />
-          <img
-            class="icon"
-            src="./assets/icons/icons-slider-rest.svg"
-            alt="icons-slider-rest"
-          />
-        </div>
+        <div class="swiper-pagination md:hidden"></div>
       </section>
 
-      <section class="dt-basic-info">
-        <h5 class="title">Mengunjungi Pantai Pulau Lombok</h5>
-        <div class="location">
-          <div class="tag">Lokasi</div>
-          <p class="list">Senggigi, Selong Belanak, Pandanan</p>
-        </div>
-      </section>
-
-      <div class="divider">&nbsp;</div>
-
-      <section class="dt-tour-guide">
-        <h5 class="heading-tg">Dilayani Oleh</h5>
-        <div class="wrapper">
-          <div class="info">
-            <div class="image">
-              <img
-                class="photo"
-                src="./assets/images/tour-guide-1.jpg"
-                alt="tour-guide-1"
-              />
+      <div class="dt-wrapper">
+        <div class="dt-left">
+          <section class="dt-basic-info">
+            <h5 class="title">Mengunjungi Pantai Pulau Lombok</h5>
+            <div class="location">
+              <div class="tag">Lokasi</div>
+              <p class="list">Senggigi, Selong Belanak, Pandanan</p>
             </div>
+          </section>
+
+          <div class="divider">
+            <div class="line">&nbsp;</div>
+          </div>
+
+          <section class="dt-tour-guide">
+            <h5 class="heading-tg">Dilayani Oleh</h5>
+            <div class="wrapper">
+              <div class="info">
+                <div class="image">
+                  <img
+                    class="photo"
+                    src="./assets/images/tour-guide-1.jpg"
+                    alt="tour-guide-1"
+                  />
+                </div>
+                <div class="text">
+                  <h5 class="name">Manda Friany</h5>
+                  <h5 class="occupation">Tour Guide</h5>
+                </div>
+              </div>
+
+              <div class="rate">
+                <h5 class="number">5.0</h5>
+                <p class="icon">
+                  <img
+                    class="w-4 h-4"
+                    src="./assets/icons/icons-star.svg"
+                    alt="icons-star"
+                  />
+                </p>
+              </div>
+            </div>
+          </section>
+
+          <div class="divider">
+            <div class="line">&nbsp;</div>
+          </div>
+
+          <div class="dt-itinerary">
+            <h5 class="heading-iti">Rencana Perjalanan</h5>
+
+            <div class="lists">
+              <div class="item">
+                <div class="heading-iti-deta">
+                  <h5 class="day">Hari Pertama - Pantai Senggigi</h5>
+                </div>
+                <p class="desc">
+                  Anda akan mengunjungi pantai senggigi, dengan panorama
+                  keindahan pantai yang tak tertandingi akan akan begitu takjub
+                  dengan keindahan yang ada.
+                </p>
+              </div>
+
+              <div class="item">
+                <div class="heading-iti-deta">
+                  <h5 class="day">Hari Kedua - Pantai Pandanan</h5>
+                </div>
+                <p class="desc">
+                  Anda akan mengunjungi pantai senggigi, dengan panorama
+                  keindahan pantai yang tak tertandingi akan akan begitu takjub
+                  dengan keindahan yang ada.
+                </p>
+              </div>
+
+              <div class="item">
+                <div class="heading-iti-deta">
+                  <h5 class="day">Hari Ketiga - Pantai Tiga</h5>
+                </div>
+                <p class="desc">
+                  Anda akan mengunjungi pantai senggigi, dengan panorama
+                  keindahan pantai yang tak tertandingi akan akan begitu takjub
+                  dengan keindahan yang ada.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="divider">
+            <div class="line">&nbsp;</div>
+          </div>
+
+          <div class="dt-feature">
+            <h5 class="heading-iti">Rencana Perjalanan</h5>
+
+            <div class="cards">
+              <div class="item">
+                <img
+                  class="icons"
+                  src="./assets/icons/icons-hotel.svg"
+                  alt="icons-hotel"
+                />
+
+                <div class="text">
+                  <h5 class="heading">Gratis Hotel 2 Malam</h5>
+                  <p class="desc">
+                    Hotel yang telah dipilihkan langsung oleh kami, dengan fitur
+                    dan ketentuan yang berlaku
+                  </p>
+                </div>
+              </div>
+
+              <div class="item">
+                <img
+                  class="icons"
+                  src="./assets/icons/icons-ticket.svg"
+                  alt="icons-ticket"
+                />
+
+                <div class="text">
+                  <h5 class="heading">Tiket Wisata Ditanggung</h5>
+                  <p class="desc">
+                    Hotel yang telah dipilihkan langsung oleh kami, dengan fitur
+                    dan ketentuan yang berlaku
+                  </p>
+                </div>
+              </div>
+
+              <div class="item">
+                <img
+                  class="icons"
+                  src="./assets/icons/icons-food.svg"
+                  alt="icons-food"
+                />
+
+                <div class="text">
+                  <h5 class="heading">Makan Lesehan Mantap</h5>
+                  <p class="desc">
+                    Hotel yang telah dipilihkan langsung oleh kami, dengan fitur
+                    dan ketentuan yang berlaku
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="divider">
+            <div class="line">&nbsp;</div>
+          </div>
+
+          <div class="dt-terms">
+            <h5 class="heading-iti">Syarat & Ketentuan</h5>
+
+            <div class="lists">
+              <div class="item">
+                <img
+                  class="icon"
+                  src="./assets/icons/icons=clock.svg"
+                  alt="icons-clock"
+                />
+                <p class="desc">Datang 15 Menit sebelum keberangkatan</p>
+              </div>
+
+              <div class="item">
+                <img
+                  class="icon"
+                  src="./assets/icons/icons=pill.svg"
+                  alt="icons-pill"
+                />
+                <p class="desc">Harap membawa obat-obatan pribadi</p>
+              </div>
+
+              <div class="item">
+                <img
+                  class="icon"
+                  src="./assets/icons/icons=warning.svg"
+                  alt="icons-warning"
+                />
+                <p class="desc">Dilarang membawa senjata tajam</p>
+              </div>
+
+              <div class="item">
+                <img
+                  class="icon"
+                  src="./assets/icons/icons=clock.svg"
+                  alt="icons-clock"
+                />
+                <p class="desc">Datang 15 Menit sebelum keberangkatan</p>
+              </div>
+
+              <div class="item">
+                <img
+                  class="icon"
+                  src="./assets/icons/icons=pill.svg"
+                  alt="icons-pill"
+                />
+                <p class="desc">Harap membawa obat-obatan pribadi</p>
+              </div>
+
+              <div class="item">
+                <img
+                  class="icon"
+                  src="./assets/icons/icons=warning.svg"
+                  alt="icons-warning"
+                />
+                <p class="desc">Dilarang membawa senjata tajam</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="dt-book-now">
+          <div class="wrapper">
             <div class="text">
-              <h5 class="name">Manda Friany</h5>
-              <h5 class="occupation">Tour Guide</h5>
-            </div>
-          </div>
+              <h3 class="title">Mengunjungi Pantai Lombok</h3>
 
-          <div class="rate">
-            <h5 class="number">5.0</h5>
-            <p class="icon">
-              <img
-                class="w-4 h-4"
-                src="./assets/icons/icons-star.svg"
-                alt="icons-star"
-              />
-            </p>
+              <div class="for-med">
+                <div class="item">
+                  <h5 class="tag">Jadwal</h5>
+                  <div class="wrapper-item">
+                    <img
+                      class="icon"
+                      src="./assets/icons/icons-calendar.svg"
+                      alt="icons-calendar"
+                    />
+                    <p class="text">24/06/2022</p>
+                  </div>
+                </div>
+
+                <div class="item">
+                  <h5 class="tag">Waktu</h5>
+                  <div class="wrapper-item">
+                    <img
+                      class="icon"
+                      src="./assets/icons/icons=clock.svg"
+                      alt="icons-clock"
+                    />
+                    <p class="text">08.30 WITA</p>
+                  </div>
+                </div>
+
+                <div class="item">
+                  <h5 class="tag">Max Tamu</h5>
+                  <div class="wrapper-item">
+                    <img
+                      class="icon"
+                      src="./assets/icons/icons=person.svg"
+                      alt="icons-calendar"
+                    />
+                    <p class="text">10 Orang</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="divider hidden md:block mb-4">
+                <div class="line">&nbsp;</div>
+              </div>
+
+              <h5 class="price">
+                <span class="big">Rp. 1.500.000,- </span>
+                / orang
+              </h5>
+              <p class="day-night">4 Hari 3 Malam</p>
+            </div>
+
+            <div class="cta">
+              <button class="btn">
+                <span class="text">Pesan</span>
+                <span class="hidden md:block">Sekarang</span>
+                <img
+                  class="icon"
+                  src="./assets/icons/icons=whatsapp.svg"
+                  alt="icons-whatsapp"
+                />
+              </button>
+            </div>
           </div>
         </div>
-      </section>
 
-      <div class="divider">&nbsp;</div>
-
-      <div class="dt-itinerary">
-        <h5 class="heading-iti">Rencana Perjalanan</h5>
-
-        <div class="lists">
-          <div class="item">
-            <div class="heading-iti-deta">
-              <img
-                class="icon"
-                src="./assets/icons/icons-number-one.svg"
-                alt="icons-number-one"
-              />
-              <h5 class="day">Hari Pertama - Pantai Senggigi</h5>
-            </div>
-            <p class="desc">
-              Anda akan mengunjungi pantai senggigi, dengan panorama keindahan
-              pantai yang tak tertandingi akan akan begitu takjub dengan
-              keindahan yang ada.
-            </p>
-          </div>
-
-          <div class="item">
-            <div class="heading-iti-deta">
-              <img
-                class="icon"
-                src="./assets/icons/icons-number-two.svg"
-                alt="icons-number-one"
-              />
-              <h5 class="day">Hari Kedua - Pantai Pandanan</h5>
-            </div>
-            <p class="desc">
-              Anda akan mengunjungi pantai senggigi, dengan panorama keindahan
-              pantai yang tak tertandingi akan akan begitu takjub dengan
-              keindahan yang ada.
-            </p>
-          </div>
-
-          <div class="item">
-            <div class="heading-iti-deta">
-              <img
-                class="icon"
-                src="./assets/icons/icons-number-three.svg"
-                alt="icons-number-one"
-              />
-              <h5 class="day">Hari Ketiga - Pantai Tiga</h5>
-            </div>
-            <p class="desc">
-              Anda akan mengunjungi pantai senggigi, dengan panorama keindahan
-              pantai yang tak tertandingi akan akan begitu takjub dengan
-              keindahan yang ada.
-            </p>
-          </div>
-        </div>
+        <div class="dt-end">&nbsp;</div>
       </div>
 
-      <div class="divider">&nbsp;</div>
-
-      <div class="dt-feature">
-        <h5 class="heading-iti">Rencana Perjalanan</h5>
-
-        <div class="cards">
-          <div class="item">
-            <img
-              class="icons"
-              src="./assets/icons/icons-hotel.svg"
-              alt="icons-hotel"
-            />
-
-            <div class="text">
-              <h5 class="heading">Gratis Hotel 2 Malam</h5>
-              <p class="desc">
-                Hotel yang telah dipilihkan langsung oleh kami, dengan fitur dan
-                ketentuan yang berlaku
-              </p>
-            </div>
-          </div>
-
-          <div class="item">
-            <img
-              class="icons"
-              src="./assets/icons/icons-ticket.svg"
-              alt="icons-ticket"
-            />
-
-            <div class="text">
-              <h5 class="heading">Tiket Wisata Ditanggung</h5>
-              <p class="desc">
-                Hotel yang telah dipilihkan langsung oleh kami, dengan fitur dan
-                ketentuan yang berlaku
-              </p>
-            </div>
-          </div>
-
-          <div class="item">
-            <img
-              class="icons"
-              src="./assets/icons/icons-food.svg"
-              alt="icons-food"
-            />
-
-            <div class="text">
-              <h5 class="heading">Makan Lesehan Mantap</h5>
-              <p class="desc">
-                Hotel yang telah dipilihkan langsung oleh kami, dengan fitur dan
-                ketentuan yang berlaku
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="divider">&nbsp;</div>
-
-      <div class="dt-terms">
-        <h5 class="heading-iti">Syarat & Ketentuan</h5>
-
-        <div class="lists">
-          <div class="item">
-            <img
-              class="icon"
-              src="./assets/icons/icons=clock.svg"
-              alt="icons-clock"
-            />
-            <p class="desc">Datang 15 Menit sebelum keberangkatan</p>
-          </div>
-
-          <div class="item">
-            <img
-              class="icon"
-              src="./assets/icons/icons=pill.svg"
-              alt="icons-pill"
-            />
-            <p class="desc">Harap membawa obat-obatan pribadi</p>
-          </div>
-
-          <div class="item">
-            <img
-              class="icon"
-              src="./assets/icons/icons=warning.svg"
-              alt="icons-warning"
-            />
-            <p class="desc">Dilarang membawa senjata tajam</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="dt-book-now">
-        <div class="wrapper">
-          <div class="text">
-            <h5 class="price">
-              <span class="big">Rp. 1.500.000,- </span>
-              / orang
-            </h5>
-            <p class="day-night">4 Hari 3 Malam</p>
-          </div>
-
-          <div class="cta">
-            <button class="btn">
-              <span class="text">Pesan</span>
-              <img
-                class="icon"
-                src="./assets/icons/icons=whatsapp.svg"
-                alt="icons-whatsapp"
-              />
-            </button>
-          </div>
-        </div>
+      <div class="divider hidden md:block">
+        <div class="line">&nbsp;</div>
       </div>
 
       <!-- Footer -->
@@ -366,5 +433,53 @@
         <div class="copyright">© 2022 Sans Travel & Tour</div>
       </footer>
     </div>
+
+    <script src="./js/swiper.js"></script>
+    <script src="./js/medium-zoom.js"></script>
+
+    <script>
+      // breakpoint where swiper will be destroyed
+      // and switches to a dual-column layout
+      const breakpoint = window.matchMedia("(min-width:768px)");
+      // keep track of swiper instances to destroy later
+      let mySwiper;
+
+      const breakpointChecker = function () {
+        // if larger viewport and multi-row layout needed
+        if (breakpoint.matches === true) {
+          // clean up old instances and inline styles when available
+          if (mySwiper !== undefined) mySwiper.destroy(true, true);
+          mySwiper.pagination.destroy();
+          // or/and do nothing
+          return;
+          // else if a small viewport and single column layout needed
+        } else if (breakpoint.matches === false) {
+          // fire small viewport version of swiper
+          return enableSwiper();
+        }
+      };
+
+      const enableSwiper = function () {
+        mySwiper = new Swiper(".swiper", {
+          // pagination
+          pagination: {
+            el: ".swiper-pagination",
+          },
+        });
+      };
+
+      // keep an eye on viewport size changes
+      breakpoint.addListener(breakpointChecker);
+      // kickstart
+      breakpointChecker();
+    </script>
+
+    <script>
+      mediumZoom(".zoom-dark", {
+        background: "#F8FAFC",
+        scrollOffset: 0,
+        margin: 64,
+      });
+    </script>
   </body>
 </html>
