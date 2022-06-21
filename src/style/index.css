@@ -12,6 +12,8 @@
   @apply bg-slate-50 text-slate-800 min-h-screen font-nunito tracking-wide relative;
 }
 
+/* Medium Zoom */
+
 .zoom-dark {
   @apply z-50;
 }
@@ -22,6 +24,26 @@
 
 .medium-zoom-image.medium-zoom-image--opened {
   width: auto !important;
+}
+
+/* Swiper */
+
+.swiper-slide {
+  @apply rounded-2xl;
+}
+
+.swiper-pagination-bullet-active {
+  @apply bg-white bg-opacity-100;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  @apply text-white bg-black bg-opacity-25 border-white w-6 h-6 rounded-full;
+}
+
+.swiper-button-next:after,
+.swiper-button-prev:after {
+  @apply text-xxs font-bold;
 }
 
 /* 
@@ -146,6 +168,8 @@
   @apply text-sm py-6 border-t border-slate-200 w-full text-center;
 }
 
+/* LANDING PAGE */
+
 /* 
   * Hero 
   */
@@ -242,24 +266,6 @@
 
 .tours .cards .item .tag .content-text {
   @apply text-xxs font-bold border-[1.5px] border-slate-50 text-slate-50 px-2 py-1 bg-slate-800 bg-opacity-30 rounded-xl;
-}
-
-.swiper-slide {
-  @apply rounded-2xl;
-}
-
-.swiper-pagination-bullet-active {
-  @apply bg-white bg-opacity-100;
-}
-
-.swiper-button-next,
-.swiper-button-prev {
-  @apply text-white bg-black bg-opacity-25 border-white w-6 h-6 rounded-full;
-}
-
-.swiper-button-next:after,
-.swiper-button-prev:after {
-  @apply text-xxs font-bold;
 }
 
 .tours .cards .item .image .slider {
@@ -421,7 +427,7 @@
   * Social Media 
   */
 .social-media {
-  @apply py-16 flex flex-col items-center;
+  @apply container mx-auto py-16 flex flex-col items-center;
 }
 
 .social-media .photos {
