@@ -12,6 +12,14 @@
   @apply bg-slate-50 text-slate-800 min-h-screen font-nunito tracking-wide relative;
 }
 
+.containing {
+  @apply mx-auto px-6
+  sm:px-8
+  md:px-10
+  lg:px-12
+  xl:px-16;
+}
+
 /* Medium Zoom */
 
 .zoom-dark {
@@ -75,7 +83,7 @@
 }
 
 .navbar {
-  @apply container mx-auto flex items-center justify-between;
+  @apply flex items-center justify-between;
 }
 
 .navbar .logo {
@@ -129,7 +137,7 @@
   * Footer 
   */
 .footer {
-  @apply pt-16 container mx-auto flex flex-col items-center;
+  @apply pt-16 flex flex-col items-center;
 }
 
 .footer .logo .icons {
@@ -229,7 +237,7 @@
 }
 
 .tours .cards {
-  @apply container mx-auto py-8 space-y-12 
+  @apply py-8 space-y-12 
   
   sm:space-y-0 sm:grid sm:grid-cols-2 sm:gap-x-8 sm:gap-y-12 sm:px-8
 
@@ -332,7 +340,7 @@
   * Benefit 
   */
 .benefit {
-  @apply py-16 container mx-auto 
+  @apply py-16 
 
   sm:px-8;
 }
@@ -363,7 +371,7 @@
   * Testimony 
   */
 .testimony {
-  @apply container mx-auto py-16 flex flex-col items-center;
+  @apply py-16 flex flex-col items-center;
 }
 
 .testimony .cards {
@@ -427,11 +435,11 @@
   * Social Media 
   */
 .social-media {
-  @apply container mx-auto py-16 flex flex-col items-center;
+  @apply py-16 flex flex-col items-center;
 }
 
 .social-media .photos {
-  @apply container mx-auto grid grid-cols-2 gap-x-3 gap-y-4 pt-8 pb-10
+  @apply grid grid-cols-2 gap-x-3 gap-y-4 pt-8 pb-10
   
   sm:px-8 sm:gap-x-6 sm:gap-y-8
   
@@ -456,7 +464,7 @@
 }
 
 .dt-wrapper {
-  @apply container mx-auto grid grid-cols-1 relative h-full
+  @apply grid grid-cols-1 relative h-full
 
   md:grid-cols-12 md:gap-x-10;
 }
@@ -469,7 +477,11 @@
 .dt-photos {
   @apply relative px-0 py-0
   
-  md:py-8 md:container md:mx-auto;
+  sm:px-0
+  md:py-8 md:mx-auto
+  md:px-10
+  lg:px-12
+  xl:px-16;
 }
 
 .dt-photos .dt-images {
