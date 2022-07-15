@@ -13,6 +13,45 @@
   </head>
   <body>
     <div id="app" class="sans">
+      <div id="show-burger" class="hamburger-show">
+        <a id="close-burger" href="javascript:void(0)" onclick="closeBurger()">
+          <svg
+            class="w-6 h-6 absolute right-4 top-4"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="#000000"
+            viewBox="0 0 256 256"
+          >
+            <rect width="256" height="256" fill="none"></rect>
+            <line
+              x1="200"
+              y1="56"
+              x2="56"
+              y2="200"
+              stroke="#000000"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="16"
+            ></line>
+            <line
+              x1="200"
+              y1="200"
+              x2="56"
+              y2="56"
+              stroke="#000000"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="16"
+            ></line>
+          </svg>
+        </a>
+
+        <ul class="hamburger-menu-show">
+          <li><a class="link" href="#">Paket Wisata</a></li>
+          <li><a class="link" href="#">Kenapa Kami</a></li>
+          <li><a class="link" href="#">Sosial Media</a></li>
+          <li><a class="link" href="#">Kontak Kami</a></li>
+        </ul>
+      </div>
       <!-- Header -->
       <header class="header containing">
         <!-- Navbar -->
@@ -24,21 +63,6 @@
               src="./assets/icons/logo-sans.svg"
               alt="logo-sans"
             />
-          </div>
-
-          <div class="search">
-            <input
-              type="text"
-              placeholder="Cari Perjalanan Anda"
-              class="input"
-            />
-            <button class="btn btn-search">
-              <img
-                class="icon"
-                src="./assets/icons/icons=search=white.svg"
-                alt="icons-search"
-              />
-            </button>
           </div>
 
           <!-- Menu -->
@@ -53,7 +77,12 @@
               </a>
             </li>
             <li class="item">
-              <a class="link" href="#">
+              <a
+                id="hamburger"
+                class="link"
+                href="javascript:void(0)"
+                onclick="showBurger()"
+              >
                 <img
                   class="icon"
                   src="./assets/icons/icons-menu.svg"
@@ -600,7 +629,7 @@
     </div>
     <script src="./js/swiper.js"></script>
 
-    <script>
+    <script type="text/javascript">
       const swiper = new Swiper(".swiper", {
         // Optional parameters
 
@@ -621,6 +650,31 @@
           el: ".swiper-scrollbar",
         },
       });
+    </script>
+    <script type="text/javascript">
+      const hamburger = document.querySelector("#hamburger");
+
+      hamburger.addEventListener("click", showBurger, false);
+
+      function showBurger() {
+        const showBurger = document.querySelector("#show-burger");
+
+        if (showBurger.style.display === "none") {
+          showBurger.style.display = "block";
+        } else {
+          showBurger.style.display = "none";
+        }
+      }
+
+      function closeBurger() {
+        const showBurger = document.querySelector("#show-burger");
+
+        if (showBurger.style.display === "block") {
+          showBurger.style.display = "none";
+        } else {
+          showBurger.style.display = "block";
+        }
+      }
     </script>
   </body>
 </html>

@@ -83,7 +83,7 @@
 }
 
 .navbar {
-  @apply flex items-center justify-between;
+  @apply flex items-center justify-between relative;
 }
 
 .navbar .logo {
@@ -131,6 +131,18 @@
   @apply w-5 h-5  
   
   sm:w-6 sm:h-6;
+}
+
+.hamburger-show {
+  @apply fixed inset-0 w-screen h-screen z-50 hidden bg-slate-100;
+}
+
+.hamburger-menu-show {
+  @apply h-screen flex items-center justify-center flex-col py-8 space-y-16 text-xl font-semibold text-slate-800;
+}
+
+.hamburger-menu-show .link {
+  @apply text-slate-800;
 }
 
 /* 
